@@ -16,7 +16,7 @@ body {
   color: #333;
   font-size: 14px;
   font-weight: bold;
-  transition: all .5s ease-in-out;
+  transition: background-color .5s ease-in-out; 
 }
 `;
 
