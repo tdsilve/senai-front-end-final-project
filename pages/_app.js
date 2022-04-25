@@ -12,6 +12,7 @@ const GlobalStyle = createGlobalStyle`
 
 }
 body {
+  background-color: '#00c1b5';
   color: #333;
   font-size: 14px;
   font-weight: bold;
