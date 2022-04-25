@@ -14,6 +14,7 @@ body {
   color: #333;
   font-size: 14px;
   font-weight: bold;
+  background-color: #00c1b5;
   transition: background-color .5s ease-in-out; 
 }
 `;
