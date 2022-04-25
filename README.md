@@ -29,4 +29,6 @@ https://developer.mozilla.org/en-US/docs/Web/API/Element/getBoundingClientRect
 
 3. I have used styled components.
 
-
+#Final Result:
+You can check the final result by clicking 
+https://glittery-pasca-b72904.netlify.app/
