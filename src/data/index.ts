@@ -1,12 +1,6 @@
-export type PostType = {
-  id: number;
-  issue: number | string;
-  isSoldOut: boolean;
-  theme: {background: string};
-  imgSrc: string;
-};
+import { Post } from "@/types";
 
-export const posts: PostType[] = [
+export const posts: Post[] = [
   {
     id: 1,
     issue: 5,
