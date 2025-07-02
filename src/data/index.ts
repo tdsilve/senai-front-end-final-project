@@ -1,11 +1,5 @@
 import { Post } from "@/types";
-export const posts: Post[] = 
-
-
-
-
-
-[
+export const posts: Post[] = [
   {
     id: 1,
     issue: 5,
