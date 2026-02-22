@@ -1,7 +1,11 @@
 "use client";
 import Image from "next/image";
 
-export const PostImage = ({ src }: { src: string }) => {
+type PostImageProps = {
+  src: string 
+}
+
+export const PostImage = ({ src }: PostImageProps) => {
   return (
     <div className="relative w-[450px] h-[500px]">
       <Image
