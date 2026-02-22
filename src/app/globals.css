@@ -1,5 +1,0 @@
-@import "tailwindcss";
-
-body {
-  @apply font-extrabold text-sm transition-all duration-1000 ease-in-out;
-}
