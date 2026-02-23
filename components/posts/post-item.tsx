@@ -1,27 +1,30 @@
 "use client";
-import React from "react";
-import { Post } from "@/model/types";
+import { Post } from "@/model/types/post";
 import { PostLink } from "./post-link";
 import { PostImage } from "./post-image";
-import { useIntersection } from "@/hook/useIntersection";
+import { useIntersectionObserver } from "usehooks-ts";
+import { useEffect } from "react";
 
 type PostItemProps = {
   post: Post;
 };
 export const PostItem = ({ post }: PostItemProps) => {
-  const ref = useIntersection<HTMLDivElement>({
-    onIntersect: (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          document.body.style.backgroundColor = post.theme.background;
-        }
-      });
-    },
-
-    threshold: 0.4,
+  const { isIntersecting, ref } = useIntersectionObserver({
+    threshold: 0.3,
   });
+
+  useEffect(() => {
+    if (!isIntersecting) return;
+
+    document.body.style.background = post.theme.background;
+  }, [isIntersecting, post.theme.background]);
+
   return (
-    <div ref={ref} className="flex flex-col items-center">
+    <div
+      ref={ref}
+      className="flex flex-col items-center"
+      data-background={post.theme.background}
+    >
       <PostImage src={post.imgSrc} />
 
       {post.isSoldOut ? (

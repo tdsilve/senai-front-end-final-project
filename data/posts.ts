@@ -1,4 +1,4 @@
-import { Post } from "@/model/types";
+import { Post } from "@/model/types/post";
 export const posts: Post[] = [
   {
     id: 1,
@@ -36,3 +36,4 @@ export const posts: Post[] = [
     imgSrc: "/images/img5.png",
   },
 ];
+

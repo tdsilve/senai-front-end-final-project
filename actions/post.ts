@@ -1,7 +1,7 @@
-import { Post } from "@/model/types";
+import { Post } from "@/model/types/post";
 
 export async function getPosts(): Promise<Post[]> {
-  const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/posts`, {
+  const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL!}/api/posts`, {
     cache: "no-cache",
   });
   if (!res.ok) {
